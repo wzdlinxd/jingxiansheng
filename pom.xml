@@ -24,6 +24,7 @@
         <module>common</module>
         <module>eureka</module>
         <module>loginandregister</module>
+        <module>customer</module>
     </modules>
 
     <dependencies>
