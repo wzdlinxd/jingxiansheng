@@ -25,9 +25,21 @@
         <module>eureka</module>
         <module>loginandregister</module>
         <module>customer</module>
+        <module>businessman</module>
+        <module>shopcar</module>
     </modules>
 
     <dependencies>
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>3.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

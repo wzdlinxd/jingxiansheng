@@ -22,6 +22,7 @@
       <module name="jingxiansheng" target="1.8" />
       <module name="loginandregister" target="1.8" />
       <module name="shopcar" target="1.8" />
+      <module name="util" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -33,6 +34,7 @@
       <module name="jingxiansheng" options="-parameters" />
       <module name="loginandregister" options="-parameters" />
       <module name="shopcar" options="-parameters" />
+      <module name="util" options="-parameters" />
     </option>
   </component>
 </project>
