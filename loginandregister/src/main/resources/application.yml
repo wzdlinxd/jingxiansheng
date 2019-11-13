@@ -1,0 +1,11 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: loginandregister
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://linxd:123456@eureka1:8761/eureka/, http://linxd:123456@eureka2:8762/eureka/
