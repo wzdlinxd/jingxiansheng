@@ -1,3 +1,4 @@
+/*
 package com.linxd.config;
 
 import lombok.extern.slf4j.Slf4j;
@@ -9,13 +10,15 @@ import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
+*/
 /**
  * Created with IntelliJ IDEA.
  *
  * @author linxd
  * @date 2019/11/6 11:48
  * Description: No Description
- */
+ *//*
+
 @Slf4j
 @Configuration
 public class JedisConfig {
@@ -67,3 +70,4 @@ public class JedisConfig {
         return jedisPool;
     }
 }
+*/
