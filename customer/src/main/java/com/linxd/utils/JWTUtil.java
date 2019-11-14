@@ -21,10 +21,11 @@ public class JWTUtil {
 
     /**
      * 生成签名
+     *
      * @param accId
      * @return
      */
-    public static String generateToken(String accId){
+    public static String generateToken(String accId) {
         Date now = new Date();
         //算法
         Algorithm algorithm = Algorithm.HMAC256(SECRET_KEY);
@@ -40,30 +41,28 @@ public class JWTUtil {
 
     /**
      * 验证token
+     *
      * @param token
      * @return
      */
-    public static boolean verify(String token){
-        try {
-            Algorithm algorithm = Algorithm.HMAC256(SECRET_KEY); //算法
-            JWTVerifier verifier = JWT.require(algorithm)
-                    .withIssuer(ISSUER)
-                    .build();
-            verifier.verify(token);
-            return true;
-        } catch (Exception ex){
-            ex.printStackTrace();
-        }
-        return false;
+    public static boolean verify(String token) throws Exception {
+
+        Algorithm algorithm = Algorithm.HMAC256(SECRET_KEY); //算法
+        JWTVerifier verifier = JWT.require(algorithm)
+                .withIssuer(ISSUER)
+                .build();
+        verifier.verify(token);
+        return true;
+
     }
 
     /**
      * 从token获取account
      */
-    public static String getAccount(String token){
-        try{
+    public static String getAccount(String token) {
+        try {
             return JWT.decode(token).getClaim("accId").asString();
-        }catch(Exception ex){
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
         return "";

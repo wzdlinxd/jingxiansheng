@@ -4,6 +4,11 @@ spring:
   profiles: eureka1
   application:
     name: eureka
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/jingxiansheng?serverTimezone=UTC
+    username: root
+    password: 123456
   security:
     user:
       name: linxd
@@ -26,6 +31,11 @@ spring:
   profiles: eureka2
   application:
     name: eureka
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/jingxiansheng?serverTimezone=UTC
+    username: root
+    password: 123456
   security:
     user:
       name: linxd

@@ -57,7 +57,7 @@ public class LoginController {
 
             //放入redis
             redisTemplate.opsForHash().put(refreshToken, "token", token);
-            redisTemplate.opsForHash().put(refreshToken, "accId", account);
+            redisTemplate.opsForHash().put(refreshToken, "accId", user.getId().toString());
             //设置token的过期时间
             redisTemplate.expire(refreshToken, JWTUtil.REFRESH_TOKEN_EXPIRE_TIME, TimeUnit.MILLISECONDS);
 
