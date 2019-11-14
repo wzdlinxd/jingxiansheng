@@ -45,7 +45,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         if (token == null) {
             return false;
         }
-        /*String accId = JWTUtil.getAccount(token);
+        String accId = JWTUtil.getAccount(token);
         if (StringUtils.isEmpty(accId)) {
             log.error("账号不存在！");
             return false;
@@ -55,7 +55,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         if (account == null) {
             log.error("账号不存在！");
             return false;
-        }*/
+        }
         boolean verify = false;
         try {
             verify = JWTUtil.verify(token);

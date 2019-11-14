@@ -1,0 +1,23 @@
+server:
+  port: 9001
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  data:
+    solr:
+      host: http://192.168.190.142:8983/solr
+  application:
+    name: common
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/jingxiansheng?serverTimezone=UTC
+    username: root
+    password: 123456
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://linxd:123456@localhost:8761/eureka, http://linxd:123456@localhost:8762/eureka
+
+
