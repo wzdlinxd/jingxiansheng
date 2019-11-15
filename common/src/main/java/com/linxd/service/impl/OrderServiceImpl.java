@@ -1,9 +1,9 @@
 package com.linxd.service.impl;
 
-import com.linxd.bean.entity.Order;
+import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import com.linxd.entity.Order;
 import com.linxd.mapper.OrderDao;
 import com.linxd.service.OrderService;
-import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**

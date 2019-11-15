@@ -2,8 +2,8 @@ package com.linxd.controller;
 
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
-import com.linxd.bean.entity.Account;
 import com.linxd.bean.vo.RegisterVo;
+import com.linxd.entity.Account;
 import com.linxd.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

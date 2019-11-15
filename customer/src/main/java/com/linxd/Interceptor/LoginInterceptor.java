@@ -1,7 +1,7 @@
 package com.linxd.Interceptor;
 
 import com.auth0.jwt.exceptions.TokenExpiredException;
-import com.linxd.bean.entity.Account;
+import com.linxd.entity.Account;
 import com.linxd.service.AccountService;
 import com.linxd.utils.JWTUtil;
 import lombok.extern.slf4j.Slf4j;

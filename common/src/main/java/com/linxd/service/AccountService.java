@@ -1,9 +1,7 @@
 package com.linxd.service;
 
 import com.baomidou.mybatisplus.service.IService;
-import com.linxd.bean.entity.Account;
-import com.linxd.bean.vo.RegisterVo;
-import org.springframework.web.bind.annotation.RequestBody;
+import com.linxd.entity.Account;
 
 /**
  * <p>

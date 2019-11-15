@@ -1,6 +1,6 @@
 package com.linxd.service.impl;
 
-import com.linxd.bean.entity.VipRecord;
+import com.linxd.entity.VipRecord;
 import com.linxd.mapper.VipRecordDao;
 import com.linxd.service.VipRecordService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;

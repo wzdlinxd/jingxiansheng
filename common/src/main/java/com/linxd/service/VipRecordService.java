@@ -1,7 +1,7 @@
 package com.linxd.service;
 
-import com.linxd.bean.entity.VipRecord;
 import com.baomidou.mybatisplus.service.IService;
+import com.linxd.entity.VipRecord;
 
 /**
  * <p>

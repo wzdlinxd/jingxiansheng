@@ -1,6 +1,6 @@
 package com.linxd.service;
 
-import com.linxd.bean.entity.Account;
+import com.linxd.entity.Account;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

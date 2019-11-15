@@ -1,7 +1,7 @@
 package com.linxd.service;
 
 import com.baomidou.mybatisplus.service.IService;
-import com.linxd.bean.entity.Customer;
+import com.linxd.entity.Customer;
 
 /**
  * <p>

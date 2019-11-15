@@ -1,8 +1,8 @@
 package com.linxd.controller;
 
-import com.linxd.bean.entity.Account;
-import com.linxd.bean.entity.Result;
 import com.linxd.bean.vo.LoginVo;
+import com.linxd.entity.Account;
+import com.linxd.entity.Result;
 import com.linxd.service.AccountService;
 import com.linxd.utils.JWTUtil;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,5 @@
 package com.linxd.service.impl;
-
-import com.linxd.bean.entity.Customer;
+import com.linxd.entity.Customer;
 import com.linxd.mapper.CustomerDao;
 import com.linxd.service.CustomerService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;

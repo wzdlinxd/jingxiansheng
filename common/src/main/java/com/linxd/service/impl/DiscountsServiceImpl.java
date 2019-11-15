@@ -1,6 +1,6 @@
 package com.linxd.service.impl;
 
-import com.linxd.bean.entity.Discounts;
+import com.linxd.entity.Discounts;
 import com.linxd.mapper.DiscountsDao;
 import com.linxd.service.DiscountsService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;

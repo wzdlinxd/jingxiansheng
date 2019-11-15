@@ -1,6 +1,6 @@
 package com.linxd.service.impl;
 
-import com.linxd.bean.entity.VipCost;
+import com.linxd.entity.VipCost;
 import com.linxd.mapper.VipCostDao;
 import com.linxd.service.VipCostService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;

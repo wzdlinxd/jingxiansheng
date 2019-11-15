@@ -1,11 +1,10 @@
 package com.linxd.controller;
 
-import com.linxd.bean.entity.Account;
-import com.linxd.bean.entity.Result;
 import com.linxd.bean.vo.RegisterVo;
+import com.linxd.entity.Account;
+import com.linxd.entity.Result;
 import com.linxd.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.util.StringUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
