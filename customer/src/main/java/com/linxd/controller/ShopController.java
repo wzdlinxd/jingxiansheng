@@ -1,28 +1,24 @@
 package com.linxd.controller;
 
-
-import com.baomidou.mybatisplus.mapper.EntityWrapper;
-import com.baomidou.mybatisplus.plugins.Page;
 import com.linxd.bean.vo.ShopQueryVo;
 import com.linxd.entity.Result;
 import com.linxd.entity.Shop;
 import com.linxd.service.ShopService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import sun.rmi.runtime.Log;
 
-import org.springframework.stereotype.Controller;
-
-import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <p>
- *  前端控制器
- * </p>
+ * Created with IntelliJ IDEA.
  *
  * @author linxd
- * @since 2019-11-14
+ * @date 2019/11/15 12:50
+ * Description: No Description
  */
+@Slf4j
 @RestController
 @RequestMapping("/shop")
 public class ShopController {
@@ -30,32 +26,36 @@ public class ShopController {
     private ShopService shopService;
 
     /**
-     * 分页获得全部商店
+     * 查询所有商店
      * @param vo
      * @return
      */
     @PostMapping("/list")
-    public List<Shop> getShopList(@RequestBody ShopQueryVo vo) {
-        Page<Shop> shopPage = new Page<>(vo.getPage(), vo.getSize());
-        Page<Shop> selectPage = shopService.selectPage(shopPage);
-        return selectPage.getRecords();
+    public Result<List<Shop>> getShopList(@RequestBody ShopQueryVo vo) {
+        log.info("访问查询所有商店/////////////");
+        List<Shop> shopList = shopService.getShopList(vo);
+        return new Result<>(200, shopList, "ok");
     }
 
     /**
-     * 根据主键查
+     * 获取指定商店信息
      * @param id
      * @return
      */
     @GetMapping("/{id}")
-    public Shop getShop(@PathVariable(value = "id") Integer id) {
-        return shopService.selectOne(new EntityWrapper<Shop>()
-            .eq("id", id));
+    public Result<Shop> getShop(@PathVariable(value = "id") Integer id) {
 
+        Shop shop = shopService.getShop(id);
+        return new Result<>(200, shop, "ok");
     }
 
+    /**
+     * 通过搜索引擎搜索
+     * @param vo
+     * @return
+     */
     @PostMapping("/solrlist")
     public List<Shop> selectBySolr(@RequestBody ShopQueryVo vo) {
         return shopService.selectBySolr(vo);
     }
 }
-

@@ -23,6 +23,12 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
 
+    /**
+     * 通过账号、权限查账号信息
+     * @param account
+     * @param role
+     * @return
+     */
     @GetMapping("/selectByAcc")
     public Account selectByAccount(@RequestParam String account, @RequestParam Integer role) {
         return accountService.selectOne(new EntityWrapper<Account>()
@@ -30,12 +36,22 @@ public class AccountController {
                 .eq("role", role));
     }
 
+    /**
+     * 通过主键查
+     * @param accId
+     * @return
+     */
     @GetMapping("/selectById")
     public Account selectById(@RequestParam Integer accId) {
         return accountService.selectOne(new EntityWrapper<Account>()
                 .eq("id", accId));
     }
 
+    /**
+     * 添加账号
+     * @param vo
+     * @return
+     */
     @PostMapping("/create")
     public boolean create(@RequestBody RegisterVo vo) {
         return accountService.create(

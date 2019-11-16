@@ -1,7 +1,10 @@
 package com.linxd.service;
 
+import com.linxd.bean.vo.ShopQueryVo;
 import com.linxd.entity.Shop;
 import com.baomidou.mybatisplus.service.IService;
+
+import java.util.List;
 
 /**
  * <p>
@@ -12,5 +15,5 @@ import com.baomidou.mybatisplus.service.IService;
  * @since 2019-11-14
  */
 public interface ShopService extends IService<Shop> {
-
+    List<Shop> selectBySolr(ShopQueryVo vo);
 }

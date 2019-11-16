@@ -7,14 +7,15 @@ import lombok.Data;
  * Created with IntelliJ IDEA.
  *
  * @author linxd
- * @date 2019/11/13 16:58
+ * @date 2019/11/16 1:02
  * Description: No Description
  */
 @Data
 @Builder
-public class RegisterVo {
-    private String account;
-    private String password;
+public class ShopQueryVo {
     private String name;
-    private int role;
+    private int page;
+    private int size;
+
+    
 }
