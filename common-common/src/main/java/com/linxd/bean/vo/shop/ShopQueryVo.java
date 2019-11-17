@@ -1,4 +1,4 @@
-package com.linxd.bean.vo;
+package com.linxd.bean.vo.shop;
 
 import lombok.Builder;
 import lombok.Data;
@@ -17,5 +17,5 @@ public class ShopQueryVo {
     private int page;
     private int size;
 
-    
+
 }

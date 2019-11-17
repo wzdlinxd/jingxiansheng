@@ -2,7 +2,8 @@ package com.linxd.controller;
 
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
-import com.linxd.bean.vo.RegisterVo;
+import com.linxd.bean.vo.account.AccountUpdateVo;
+import com.linxd.bean.vo.account.RegisterVo;
 import com.linxd.entity.Account;
 import com.linxd.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,5 +63,17 @@ public class AccountController {
                         .role(vo.getRole())
                         .build());
     }
+
+    /**
+     * 修改
+     * @param vo
+     * @return
+     */
+    @PostMapping("/update")
+    public boolean updata(@RequestBody AccountUpdateVo vo) {
+        return accountService.update(Account.builder().name(vo.getName()).password(vo.getPassword()).build()
+                , new EntityWrapper<Account>().eq("id", vo.getAccId()));
+    }
+
 }
 

@@ -1,9 +1,12 @@
 package com.linxd.entity;
 
-import com.baomidou.mybatisplus.activerecord.Model;
-import com.baomidou.mybatisplus.annotations.TableField;
-import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.enums.IdType;
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.activerecord.Model;
+import lombok.Builder;
+import org.apache.solr.client.solrj.beans.Field;
+import org.springframework.data.solr.core.mapping.SolrDocument;
 
 import java.io.Serializable;
 
@@ -13,42 +16,52 @@ import java.io.Serializable;
  * </p>
  *
  * @author linxd
- * @since 2019-11-14
+ * @since 2019-11-17
  */
+@Builder
+@SolrDocument(solrCoreName = "stock")
 public class Stock extends Model<Stock> {
 
     private static final long serialVersionUID = 1L;
 
+    @Field("stock_id")
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
     /**
      * 商品名称
      */
+    @Field("goods_name")
     @TableField("goods_name")
     private String goodsName;
     /**
      * 商品价格
      */
+    @Field("goods_price")
     @TableField("goods_price")
-    private String goodsPrice;
+    private Integer goodsPrice;
     /**
      * 商品详情
      */
+    @Field("goods_details")
     @TableField("goods_details")
     private String goodsDetails;
     /**
      * 库存数量
      */
+    @Field("stock")
     private Integer stock;
     /**
      * 状态 0：下架；1：上架
      */
+    @Field("status")
     private Integer status;
+    @Field("shop_id")
     @TableField("shop_id")
     private Integer shopId;
     /**
      * 图片
      */
+    @Field("image")
     private String image;
 
 
@@ -68,11 +81,11 @@ public class Stock extends Model<Stock> {
         this.goodsName = goodsName;
     }
 
-    public String getGoodsPrice() {
+    public Integer getGoodsPrice() {
         return goodsPrice;
     }
 
-    public void setGoodsPrice(String goodsPrice) {
+    public void setGoodsPrice(Integer goodsPrice) {
         this.goodsPrice = goodsPrice;
     }
 

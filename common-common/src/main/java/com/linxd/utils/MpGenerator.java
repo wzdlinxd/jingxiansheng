@@ -14,7 +14,7 @@ public class MpGenerator {
 
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
-        gc.setOutputDir("F:\\idea\\ideaProjects\\jingxiansheng\\common\\src\\main\\java");
+        gc.setOutputDir("F:\\idea\\ideaProjects\\jingxiansheng\\common-common\\src\\main\\java");
         gc.setFileOverride(true);   //覆盖生成
         gc.setActiveRecord(true);// 不需要ActiveRecord特性的请改为false .setEntityLombokModel(true)
         gc.setEnableCache(false);// XML 二级缓存
@@ -26,9 +26,6 @@ public class MpGenerator {
         // 自定义文件命名，注意 %s 会自动填充表实体属性！
         gc.setMapperName("%sDao");
         gc.setXmlName("%sDao");
-        gc.setServiceName("%sService");
-        gc.setServiceImplName("%sServiceImpl");
-        gc.setControllerName("%sController");
         mpg.setGlobalConfig(gc);
 
         // 数据源配置
@@ -52,7 +49,7 @@ public class MpGenerator {
         // 策略配置
         StrategyConfig strategy = new StrategyConfig();
         strategy.setNaming(NamingStrategy.underline_to_camel);// 表名生成策略
-        strategy.setInclude(new String[] { "stock", "customer", "shop" }); // 需要生成的表
+        strategy.setInclude(new String[] { "stock" }); // 需要生成的表
         // strategy.setExclude(new String[]{"test"}); // 排除生成的表
         strategy.setEntityColumnConstant(true);
         mpg.setStrategy(strategy);

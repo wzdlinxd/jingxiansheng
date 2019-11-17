@@ -1,6 +1,6 @@
 package com.linxd.service;
 
-import com.linxd.bean.vo.ShopQueryVo;
+import com.linxd.bean.vo.shop.ShopQueryVo;
 import com.linxd.entity.Shop;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;

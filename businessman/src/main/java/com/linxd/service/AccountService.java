@@ -2,6 +2,7 @@ package com.linxd.service;
 
 import com.linxd.bean.vo.account.AccountUpdateVo;
 import com.linxd.entity.Account;
+import com.linxd.entity.Result;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -34,6 +35,7 @@ public interface AccountService {
     @GetMapping("/selectById")
     Account selectById(@RequestParam Integer accId);
 
+
     /**
      * 修改
      * @param vo
@@ -41,5 +43,4 @@ public interface AccountService {
      */
     @PostMapping("/updata")
     boolean updata(@RequestBody AccountUpdateVo vo);
-
 }

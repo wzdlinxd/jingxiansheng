@@ -1,4 +1,4 @@
-package com.linxd.bean.vo;
+package com.linxd.bean.vo.account;
 
 import lombok.Data;
 

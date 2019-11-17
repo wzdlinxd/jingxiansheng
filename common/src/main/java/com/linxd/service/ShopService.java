@@ -1,6 +1,6 @@
 package com.linxd.service;
 
-import com.linxd.bean.vo.ShopQueryVo;
+import com.linxd.bean.vo.shop.ShopQueryVo;
 import com.linxd.entity.Shop;
 import com.baomidou.mybatisplus.service.IService;
 

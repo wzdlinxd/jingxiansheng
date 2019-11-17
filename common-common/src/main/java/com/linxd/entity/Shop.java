@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.enums.IdType;
+import lombok.Builder;
 import org.apache.solr.client.solrj.beans.Field;
 import org.springframework.data.solr.core.mapping.SolrDocument;
 
@@ -17,6 +18,7 @@ import java.io.Serializable;
  * @author linxd
  * @since 2019-11-14
  */
+@Builder
 @SolrDocument(solrCoreName = "shop")
 public class Shop extends Model<Shop> {
 
@@ -52,7 +54,11 @@ public class Shop extends Model<Shop> {
 
     @Field("image")
     private String image;
-
+    /**
+     * 状态 0：歇业；1：开业
+     */
+    @Field("status")
+    private Integer status;
 
     public Integer getId() {
         return id;
@@ -100,6 +106,14 @@ public class Shop extends Model<Shop> {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
     public static final String ID = "id";

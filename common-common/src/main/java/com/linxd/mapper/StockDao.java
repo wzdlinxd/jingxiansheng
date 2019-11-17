@@ -1,7 +1,7 @@
 package com.linxd.mapper;
 
-import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.linxd.entity.Stock;
+import com.baomidou.mybatisplus.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Mapper;
  * </p>
  *
  * @author linxd
- * @since 2019-11-14
+ * @since 2019-11-17
  */
 @Mapper
 public interface StockDao extends BaseMapper<Stock> {

@@ -1,13 +1,12 @@
 package com.linxd.controller;
 
-import com.linxd.bean.vo.ShopQueryVo;
+import com.linxd.bean.vo.shop.ShopQueryVo;
 import com.linxd.entity.Result;
 import com.linxd.entity.Shop;
 import com.linxd.service.ShopService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import sun.rmi.runtime.Log;
 
 import java.util.List;
 

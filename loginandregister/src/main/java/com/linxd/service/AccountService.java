@@ -1,6 +1,6 @@
 package com.linxd.service;
 
-import com.linxd.bean.vo.RegisterVo;
+import com.linxd.bean.vo.account.RegisterVo;
 import com.linxd.entity.Account;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

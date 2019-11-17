@@ -13,6 +13,8 @@ import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -44,19 +46,29 @@ public class SolrUtils<T> {
         return null;
     }
 
-    public <T> List<T> queryFromSolr(List<String> params, String value
+    public <T> List<T> queryFromSolr(Map<String,Object> params
             , Class<T> tClass, Integer page, Integer size) {
         checkCore();
         SolrQuery solrQuery = new SolrQuery();
-        solrQuery.setQuery(value);
-        if (StringUtils.isBlank(value)) {
-            value = "*";
-        }
         if (params != null && params.size() > 0) {
-            StringBuilder sb = new StringBuilder(params.get(0) + ":" + value);
-            for (int i = 1; i < params.size(); i++) {
-                sb.append(" OR " + params.get(i) + ":" + value);
+
+            Set<String> keys = params.keySet();
+            StringBuilder sb = new StringBuilder("");
+            int index = 1;
+            for (String key : keys) {
+                Object value = params.get(key);
+                if (value == null) {
+                    value = "*";
+                }
+                if (index == 1) {
+                    sb.append(key + ":" + value);
+                    index++;
+                } else {
+                    sb.append(" OR " + key + ":" + value);
+                }
+
             }
+
             solrQuery.setQuery(sb.toString());
         } else {
             solrQuery.setQuery("* : *");

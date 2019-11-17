@@ -1,6 +1,6 @@
 package com.linxd.controller;
 
-import com.linxd.bean.vo.RegisterVo;
+import com.linxd.bean.vo.account.RegisterVo;
 import com.linxd.entity.Account;
 import com.linxd.entity.Result;
 import com.linxd.service.AccountService;
