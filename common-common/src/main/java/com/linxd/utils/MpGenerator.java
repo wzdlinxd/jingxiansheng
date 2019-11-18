@@ -26,6 +26,9 @@ public class MpGenerator {
         // 自定义文件命名，注意 %s 会自动填充表实体属性！
         gc.setMapperName("%sDao");
         gc.setXmlName("%sDao");
+        gc.setServiceName("%sService");
+        gc.setServiceImplName("%sServiceImpl");
+        gc.setControllerName("%sController");
         mpg.setGlobalConfig(gc);
 
         // 数据源配置
@@ -49,7 +52,7 @@ public class MpGenerator {
         // 策略配置
         StrategyConfig strategy = new StrategyConfig();
         strategy.setNaming(NamingStrategy.underline_to_camel);// 表名生成策略
-        strategy.setInclude(new String[] { "stock" }); // 需要生成的表
+        strategy.setInclude(new String[] { "shop_car" }); // 需要生成的表
         // strategy.setExclude(new String[]{"test"}); // 排除生成的表
         strategy.setEntityColumnConstant(true);
         mpg.setStrategy(strategy);

@@ -128,6 +128,8 @@ public class Shop extends Model<Shop> {
 
     public static final String IMAGE = "image";
 
+    public static final String STATUS = "status";
+
     @Override
     protected Serializable pkVal() {
         return this.id;
