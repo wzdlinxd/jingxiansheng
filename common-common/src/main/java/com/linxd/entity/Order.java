@@ -54,7 +54,7 @@ public class Order extends Model<Order> {
     @TableField("shop_id")
     private Integer shopId;
     /**
-     * 客户id
+     * 价格
      */
     @TableField("price")
     private Double price;

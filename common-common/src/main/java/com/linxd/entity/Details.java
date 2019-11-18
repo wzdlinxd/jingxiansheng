@@ -38,6 +38,12 @@ public class Details extends Model<Details> {
     @TableField("order_id")
     private Integer orderId;
 
+    /**
+     * 价格
+     */
+    @TableField("price")
+    private Double price;
+
 
     public Integer getId() {
         return id;
@@ -71,6 +77,14 @@ public class Details extends Model<Details> {
         this.orderId = orderId;
     }
 
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
     public static final String ID = "id";
 
     public static final String STOCK_ID = "stock_id";
@@ -78,6 +92,8 @@ public class Details extends Model<Details> {
     public static final String NUM = "num";
 
     public static final String ORDER_ID = "order_id";
+
+    public static final String PRICE = "price";
 
     @Override
     protected Serializable pkVal() {

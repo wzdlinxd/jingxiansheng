@@ -2,6 +2,9 @@ package com.linxd.service;
 
 import com.baomidou.mybatisplus.service.IService;
 import com.linxd.entity.Discounts;
+import com.linxd.entity.ShopCar;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,5 @@ import com.linxd.entity.Discounts;
  */
 public interface DiscountsService extends IService<Discounts> {
 
+    Double getRealCost(List<ShopCar> shopCars);
 }

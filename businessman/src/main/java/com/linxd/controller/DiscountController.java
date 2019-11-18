@@ -2,7 +2,6 @@ package com.linxd.controller;
 
 import com.linxd.entity.Discounts;
 import com.linxd.entity.Result;
-import com.linxd.entity.ShopCar;
 import com.linxd.service.DiscountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -34,14 +33,25 @@ public class DiscountController {
     }
 
     /**
-     * 计算最终价格
-     * @param shopCars
+     * 添加折扣
+     * @param discount
      * @return
      */
-    @PostMapping("/realcost")
-    public Result<Double> getRealCost(@RequestBody List<ShopCar> shopCars) {
-        Double cost = discountService.getRealCost(shopCars);
-        return new Result<>(200, cost, "ok");
+    @PostMapping("/create")
+    public Result<String> create(@RequestBody Discounts discount) {
+        discountService.create(discount);
+        return new Result<>(200, null, "ok");
+    }
+
+    /**
+     * 删除折扣
+     * @param discountId
+     * @return
+     */
+    @GetMapping("/delete")
+    public Result<String> delete(@RequestParam Integer discountId) {
+        discountService.delete(discountId);
+        return new Result<>(200, null, "ok");
     }
 
 }

@@ -38,7 +38,7 @@ public class Stock extends Model<Stock> {
      */
     @Field("goods_price")
     @TableField("goods_price")
-    private Integer goodsPrice;
+    private Double goodsPrice;
     /**
      * 商品详情
      */
@@ -81,11 +81,11 @@ public class Stock extends Model<Stock> {
         this.goodsName = goodsName;
     }
 
-    public Integer getGoodsPrice() {
+    public Double getGoodsPrice() {
         return goodsPrice;
     }
 
-    public void setGoodsPrice(Integer goodsPrice) {
+    public void setGoodsPrice(Double goodsPrice) {
         this.goodsPrice = goodsPrice;
     }
 

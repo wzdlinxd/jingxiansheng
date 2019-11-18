@@ -75,6 +75,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderDao, Order> implements Or
                     .num(shopCar.getNum())
                     .orderId(orderId)
                     .stockId(shopCar.getStockId())
+                    .price(shopCar.getPrice())
                     .build());
         }
         return true;
